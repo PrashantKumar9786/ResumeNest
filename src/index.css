@@ -1,0 +1,209 @@
+@tailwind base;
+@layer base {
+  img {
+    @apply inline-block;
+  }
+  
+  /* Theme CSS variables */
+  :root {
+    /* Default variables that will be overridden by theme classes */
+    --color-primary: #1e40af; /* Blue-800 */
+    --color-secondary: #2563eb; /* Blue-600 */
+    --color-accent: #60a5fa; /* Blue-400 */
+    
+    --color-bg: #ffffff;
+    --color-text: #1f2937;
+    --color-heading: var(--color-primary);
+    --color-border: #e5e7eb;
+    --color-accent-text: var(--color-secondary);
+    --color-skill-bg: #dbeafe;
+    --color-skill-text: var(--color-primary);
+    --color-header-bg: #eff6ff;
+    --color-sidebar-bg: #ffffff;
+    --color-form-bg: #f9fafb;
+    --color-card-bg: #ffffff;
+    --color-button-bg: var(--color-secondary);
+    --color-button-hover: var(--color-primary);
+    --color-button-text: #ffffff;
+  }
+  
+  /* Blue theme */
+  .theme-blue {
+    --color-primary: #1e40af; /* Blue-800 */
+    --color-secondary: #2563eb; /* Blue-600 */
+    --color-accent: #60a5fa; /* Blue-400 */
+    
+    --color-bg: #ffffff;
+    --color-text: #1f2937;
+    --color-heading: var(--color-primary);
+    --color-border: #bfdbfe;
+    --color-accent-text: var(--color-secondary);
+    --color-skill-bg: #dbeafe;
+    --color-skill-text: var(--color-primary);
+    --color-header-bg: #eff6ff;
+    --color-sidebar-bg: #ffffff;
+    --color-form-bg: #f9fafb;
+    --color-card-bg: #ffffff;
+    --color-button-bg: var(--color-secondary);
+    --color-button-hover: var(--color-primary);
+    --color-button-text: #ffffff;
+  }
+  
+  /* Green theme */
+  .theme-green {
+    --color-primary: #166534; /* Green-800 */
+    --color-secondary: #16a34a; /* Green-600 */
+    --color-accent: #2dd4bf; /* Teal-400 */
+    
+    --color-bg: #ffffff;
+    --color-text: #1f2937;
+    --color-heading: var(--color-primary);
+    --color-border: #bbf7d0;
+    --color-accent-text: var(--color-secondary);
+    --color-skill-bg: #dcfce7;
+    --color-skill-text: var(--color-primary);
+    --color-header-bg: #f0fdf4;
+    --color-sidebar-bg: #ffffff;
+    --color-form-bg: #f9fafb;
+    --color-card-bg: #ffffff;
+    --color-button-bg: var(--color-secondary);
+    --color-button-hover: var(--color-primary);
+    --color-button-text: #ffffff;
+  }
+  
+  /* Purple theme */
+  .theme-purple {
+    --color-primary: #581c87; /* Purple-900 */
+    --color-secondary: #9333ea; /* Purple-600 */
+    --color-accent: #a78bfa; /* Violet-400 */
+    
+    --color-bg: #ffffff;
+    --color-text: #1f2937;
+    --color-heading: var(--color-primary);
+    --color-border: #e9d5ff;
+    --color-accent-text: var(--color-secondary);
+    --color-skill-bg: #f3e8ff;
+    --color-skill-text: var(--color-primary);
+    --color-header-bg: #faf5ff;
+    --color-sidebar-bg: #ffffff;
+    --color-form-bg: #f9fafb;
+    --color-card-bg: #ffffff;
+    --color-button-bg: var(--color-secondary);
+    --color-button-hover: var(--color-primary);
+    --color-button-text: #ffffff;
+  }
+  
+  /* Red theme */
+  .theme-red {
+    --color-primary: #991b1b; /* Red-800 */
+    --color-secondary: #dc2626; /* Red-600 */
+    --color-accent: #f87171; /* Red-400 */
+    
+    --color-bg: #ffffff;
+    --color-text: #1f2937;
+    --color-heading: var(--color-primary);
+    --color-border: #fecaca;
+    --color-accent-text: var(--color-secondary);
+    --color-skill-bg: #fee2e2;
+    --color-skill-text: var(--color-primary);
+    --color-header-bg: #fef2f2;
+    --color-sidebar-bg: #ffffff;
+    --color-form-bg: #f9fafb;
+    --color-card-bg: #ffffff;
+    --color-button-bg: var(--color-secondary);
+    --color-button-hover: var(--color-primary);
+    --color-button-text: #ffffff;
+  }
+  
+  /* Gray theme */
+  .theme-gray {
+    --color-primary: #1f2937; /* Gray-800 */
+    --color-secondary: #4b5563; /* Gray-600 */
+    --color-accent: #9ca3af; /* Gray-400 */
+    --color-bg: #ffffff;
+    --color-text: #1f2937;
+    --color-heading: var(--color-primary);
+    --color-border: #d1d5db;
+    --color-accent-text: var(--color-secondary);
+    --color-skill-bg: #e5e7eb;
+    --color-skill-text: var(--color-primary);
+    --color-header-bg: #f3f4f6;
+    --color-sidebar-bg: #ffffff;
+    --color-form-bg: #f9fafb;
+    --color-card-bg: #ffffff;
+    --color-button-bg: var(--color-secondary);
+    --color-button-hover: var(--color-primary);
+    --color-button-text: #ffffff;
+  }
+}
+@tailwind components;
+@tailwind utilities;
+
+/* Theme utility classes */
+.theme-button {
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  transition: all 0.2s ease;
+}
+
+.theme-button:hover {
+  background-color: var(--color-button-hover);
+}
+
+.theme-border {
+  border-color: var(--color-border);
+}
+
+.accent-text {
+  color: var(--color-accent-text);
+}
+
+/* Resume specific styles */
+@layer components {
+  .resume-section {
+    @apply mb-4;
+  }
+  
+  .section-title {
+    @apply text-lg font-bold border-b pb-1 mb-2;
+  }
+  
+  .form-input {
+    @apply w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+  
+  .form-label {
+    @apply block text-sm font-medium mb-1;
+  }
+  
+  .btn {
+    @apply px-4 py-2 rounded font-medium focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-500;
+  }
+  
+  .btn-danger {
+    @apply bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    @apply bg-white text-black;
+  }
+  
+  .no-print {
+    @apply hidden;
+  }
+  
+  .resume-container {
+    @apply shadow-none border-none;
+  }
+}
